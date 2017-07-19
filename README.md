@@ -47,3 +47,12 @@ NOTES:
 
 *** To check again if new data is being inserted into the graph, you could INSERT a new register, just remember to be very carefull specially with the columns "Report_Date" and "Count_StartTime" which are the ones that matter for this graphs.
 
+
+
+
+UPDATE 1:
+
+* To restore the database use the command prompt "C:\Program Files (x86)\PostgreSQL\9.1>psql -U postgres optexEvents < "path\BackupEventsTable.backup" "
+
+* To update the data stored in the database you should use this query:
+UPDATE events SET "Report_Date"= current_date - interval '1 day'
